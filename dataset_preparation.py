@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Load raw SCF file
-df = pd.read_csv("SCFPcopy.csv")
+df = pd.read_csv("SCF2022.csv")
 df_cln = df.copy()
 
 # Detect binary variables still coded as 1/2 and convert them to 0/1
@@ -132,3 +132,4 @@ for prefix, cols in dummy_groups.items():
 df_cln.to_csv("SCF2022_READY.csv", index=False)
 
 print("\nSaved READY dataset as SCF2022_READY.csv")
+
